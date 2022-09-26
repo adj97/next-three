@@ -27,9 +27,9 @@ export default function Home() {
             <p>Find in-depth information about Next.js features and API.</p>
           </a>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
+          <a href="/api" className={styles.card}>
             <h2>Api &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
+            <p>Browse the locally hosted api backend</p>
           </a>
         </div>
 
@@ -43,7 +43,7 @@ export default function Home() {
             href="/birds"
             className={styles.card}>
             <h2>Birds &rarr;</h2>
-            <p>Three.js birds flying in a cirlce</p>
+            <p>Three.js birds flying in a circle</p>
           </a>
 
           <a
