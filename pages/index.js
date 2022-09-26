@@ -28,26 +28,29 @@ export default function Home() {
           </a>
 
           <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
+            <h2>Api &rarr;</h2>
             <p>Learn about Next.js in an interactive course with quizzes!</p>
           </a>
+        </div>
+
+        <p className={styles.description}>
+          Three.js examples
+        </p>
+
+        <div className={styles.grid}>
 
           <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
+            href="/birds"
+            className={styles.card}>
+            <h2>Birds &rarr;</h2>
+            <p>Three.js birds flying in a cirlce</p>
           </a>
 
           <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
+            href="/boxes"
+            className={styles.card}>
+            <h2>Boxes &rarr;</h2>
+            <p>Three.js clickable boxes in a grid</p>
           </a>
         </div>
       </main>
@@ -56,8 +59,7 @@ export default function Home() {
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
-          rel="noopener noreferrer"
-        >
+          rel="noopener noreferrer">
           Powered by{' '}
           <span className={styles.logo}>
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
