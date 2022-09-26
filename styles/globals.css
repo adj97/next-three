@@ -24,3 +24,16 @@ a {
     background: black;
   }
 }
+
+canvas {
+  width: 100%;
+  height: 100vh;
+  background: lavender;
+}
+
+h1.boxtitle {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  color: hotpink;
+}
