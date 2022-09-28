@@ -1,9 +1,14 @@
 import { useRef, useState } from 'react'
 import { useFrame } from '@react-three/fiber'
 import { Box as NativeBox } from '@react-three/drei'
+import { withRouter } from 'next/router'
 
-export default function Box(props) {
+function Box(props) {
   const mesh = useRef()
+
+  // this one doesn't
+  console.log(props.router)
+  // returns null
 
   const [hovered, setHover] = useState(false)
   const [active, setActive] = useState(false)
@@ -16,7 +21,10 @@ export default function Box(props) {
       {...props}
       ref={mesh}
       scale={active ? [6, 6, 6] : [5, 5, 5]}
-      onClick={() => setActive(!active)}
+      onClick={() => {
+        setActive(!active)
+        props.router.push(props.link)
+      }}
       onPointerOver={() => setHover(true)}
       onPointerOut={() => setHover(false)}
     >
@@ -27,3 +35,5 @@ export default function Box(props) {
     </NativeBox>
   )
 }
+
+export default withRouter(Box)
